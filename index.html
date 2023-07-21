@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>AutoSlide</title>
+</head>
+<body>
+    <!-- Image Slider start -->
+<div class="slider">
+    <div class="slides">
+        <!-- Radio button start -->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!-- Radio button close -->
+
+        <!-- Image start -->
+        <div class="slide first">
+            <img src="images/img1.jpg" alt="">
+        </div>
+        <div class="slide"> 
+            <img src="images/img2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/img3.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="images/img4.png" alt="">
+        </div>
+        <!-- Image close -->
+
+        <!-- Automatic navigation start -->
+        <div class="navigation-auto">
+            <div class="auto-btn-1"></div>
+            <div class="auto-btn-2"></div>
+            <div class="auto-btn-3"></div>
+            <div class="auto-btn-4"></div>
+        </div>
+        <!-- Automatic navigation close -->
+    </div>
+    <!-- Manual Navigation start -->
+    <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+    </div>
+    <!-- Manual Navigation close -->
+</div>
+
+    <!-- Image Slider close -->   
+
+<script>
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById('radio'+counter).checked = true;
+        counter++;
+
+        if(counter >4) {
+            counter = 1;
+        }
+    }, 5000);
+</script>
+</body>
+</html>
